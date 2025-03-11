@@ -28,6 +28,10 @@ const ManagePatients = () => {
 
     // Crear un nuevo paciente
     const handleCreatePatient = () => {
+        if (!fechaInternacion || !fechaAlta) {
+            alert("Las fechas de internación y alta son obligatorias.");
+         return;
+        }
         axios.post('http://localhost:5000/api/pacientes', {
             nombre,
             apellido,

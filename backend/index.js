@@ -82,6 +82,11 @@ app.post('/api/pacientes', async (req, res) => {
         fecha_alta
     } = req.body;
 
+    // Validar campos de fecha
+    const fechaInternacionValida = fecha_internacion || null;
+    const fechaAltaValida = fecha_alta || null;
+
+
     try {
         const result = await pool.query(
             `INSERT INTO pacientes (

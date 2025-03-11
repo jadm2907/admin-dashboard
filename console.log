@@ -1,0 +1,15 @@
+console.log({
+    nombre,
+    apellido,
+    rut,
+    genero,
+    direccion,
+    telefono,
+    email,
+    apoderado,
+    parentesco,
+    direccion_apoderado,
+    telefono_apoderado,
+    fecha_internacion: fechaInternacion,
+    fecha_alta: fechaAlta
+});

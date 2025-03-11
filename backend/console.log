@@ -1,0 +1,37 @@
+app.post('/api/pacientes', async (req, res) => {
+    console.log(req.body); // Verifica los datos recibidos
+    const {
+        nombre,
+        apellido,
+        rut,
+        genero,
+        direccion,
+        telefono,
+        email,
+        apoderado,
+        parentesco,
+        direccion_apoderado,
+        telefono_apoderado,
+        fecha_internacion,
+        fecha_alta
+    } = req.body;
+
+    // Resto del código...
+});
+
+
+
+ Valida los campos de fecha en el backend
+
+    Asegúrate de que los campos de fecha no estén vacíos antes de insertarlos en la base de datos:
+    javascript
+    Copy
+
+    const fechaInternacionValida = fecha_internacion || null;
+    const fechaAltaValida = fecha_alta || null;
+
+
+
+    ALTER TABLE pacientes
+ALTER COLUMN fecha_internacion DROP NOT NULL,
+ALTER COLUMN fecha_alta DROP NOT NULL;
